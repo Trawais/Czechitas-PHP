@@ -25,9 +25,13 @@ $pages = [
     'facebook' => 'Facebook profil'
 ];
 ```
-3. Nyní vytvoříme dvě funkce:
-  - funkce `createMenuItem()` - tato funkce nám vytvoří jednu položku menu
-  - funkce `getMenu()` - funkce si vytvoří pomocí předchozí funkce všechny položky,
-  vytvoří menu a vrátí ho
-4. Když máme tyto funkce vytvořené,
-nahradíme starý výpis v souboru **menu.php** výpisem pomocí funkce `getMenu()`.
+3. Nyní použijme nadefinované pole `$pages` pro vygenerovaní samotného menu.
+4. Jelikož se jedná o poměrně delší kus kódu,
+je vhodné takový kód zapouzdřit do nové funkce a tedy přesunout do souboru **functions.php**.
+Nově vzniklou funkci nazvěme `getMenu()` a rovnou ji použijme v souboru **menu.php**.
+
+## Bonus
+1. Jakožto praví programátoři se ale s výslednou funkcí `getMenu()` nemůžeme jen tak spokojit.
+Tato funkce sama o sobě stále provádí dvě logicky různé věci: prochází položky menu a generuje samotné jednotlivé odkazy.
+Zkusme si tedy samotné sestavování `<a href...` elementu vyseparovat do další malé funkce s názvem `createMenuItem()`.
+2. Tuto funkci potom použijeme ve funkci `getMenu()` na vhodném místě.
