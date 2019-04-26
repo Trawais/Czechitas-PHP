@@ -53,6 +53,25 @@ include_once 'functions.php';
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label for="store">Obchod</label>
+                            <select name="store" class="form-control" id="store">
+                                <option value="" selected disabled>Vyber Obchod</option>
+                                <option value="marks&spencer">Marks & Spencer</option>
+                                <option value="c&a">C&A</option>
+                                <option value="esprit">Esprit</option>
+                            </select>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label for="quantity">Množství</label>
+                            <input type="number" class="form-control" placeholder="Množství" name="quantity" id="quantity" required />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label for="price">Cena</label>
                             <input type="number" class="form-control" placeholder="Cena"  name="price" id="price" step="0.01" min="0" max="1000000" required />
                             <p class="help-block text-danger"></p>

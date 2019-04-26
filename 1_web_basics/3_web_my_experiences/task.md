@@ -6,7 +6,7 @@ V této částo se zaměříme na procvičení polí, cyklů a podmínek.
 
 ## Úkol
 1. Prvním úkolem bude vytvořit pole `$workExperiences` obsahující všechny moje pracovní zkušenosti.
-To znamená vytvořit pole, skládající se z položek typu `stringu`.
+To znamená vytvořit pole, skládající se z položek typu `string`.
 2. Každá z těchto položek bude nějaká pracovní zkušenost.
 Takové pracovní zkušenosti si vytvořte minimálně tři.
 3. V části **Pracovní zkušenosti** si tyto pracovní zkušenosti jednu po druhé vypíšeme pomocí cyklu `for` nebo `foreach`.
@@ -37,7 +37,7 @@ není zrovna hezké.
 Přeci jen,
 čeština trochu nebo i více mění tvar slova `rok` pro daný počet.
 Proto i my by jsme měli tuto skutečnost reflektovat na našich stránkách.
-1. Vaším úkolem nyní bude pomocí podmínek správně zobrazovat slovo rok za každým počtem (např. 1 rok, 3 roky, 5 let).
+2. Vaším úkolem nyní bude pomocí podmínek správně zobrazovat slovo rok za každým počtem (např. 1 rok, 3 roky, 5 let).
 Vytvořte podmínku,
 která správně vybere toto slovo,
 přířadí do proměnné `$years` a touto proměnnou nahraďte slovo let.
