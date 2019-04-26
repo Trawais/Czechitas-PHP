@@ -23,7 +23,6 @@ Zobrazení odeslaných hodnot z formuláře
 ```
 - Můžeme tedy libovolnou hodnotu získat tak, že do pole přistoupíme přes daný klíč, např. ``$_GET['price']`` nám vrátí v tomto případě ``'1199'``.
 6. Tvým úkolem bude využit podmínek a ``$_GET`` pole, abys v případě, že je formulář odeslán, vypsala hodnoty, které byly ve formuláři zadány, na webovou stránku.
-- Abys zjistila, zda byl formulář odeslán, bude se Ti hodit podmínka "``if``" a kontrola, zda ``$_GET`` obsahuje nějakou hodnotu pomocí "``isset``". http://php.net/manual/en/function.isset.php
-7. Pro výpis můžeš použít HTML značky, nebo pro zatím postačí funkce ``var_dump``, která není pro návštěvníky zrovna dvakrát vhodná, ale jelikož zatím vyvíjíme, dočasně ji můžeme využít. :-)
-
-
+- Abys zjistila, zda byl formulář odeslán, bude se Ti hodit podmínka "``if``" a kontrola, zda ``$_GET`` obsahuje nějakou hodnotu pomocí "`empty()`". https://php.net/manual/en/function.empty.php
+7. Pro výpis pole použijte metodu `var_dump()`
+8. Tento výpis není pro návštěvníky zrovna moc hezký. "Vyhezkej" výpis pomocí nějakých HTML značek a vypiš hodnoty odeslaného formuláře jako pěkný text.

@@ -86,14 +86,19 @@ include_once 'functions.php';
                     </div>
                 </form>
             </div>
-            <?php
-            //$submitButton = $_GET['add'];
-            //$title = $_GET['title'];
-            //$store = $_GET['store'];
-            //echo "<strong>Toto je naše nově přidaná položka. :-)</strong><br>";
-            ?>
         </div>
     </div>
+
+    <?php
+    if (!empty($_GET)) {
+        echo "<p>";
+        echo "<b>Název:</b> {$_GET['title']} <br>";
+        echo "<b>Obchod:</b> {$_GET['store']} <br>";
+        echo "<b>Množství</b> {$_GET['quantity']} <br>";
+        echo "<b>Cena</b> {$_GET['price']}";
+        echo "</p>";
+    }
+    ?>
 
     <?php include_once 'footer.php' ?>
 
