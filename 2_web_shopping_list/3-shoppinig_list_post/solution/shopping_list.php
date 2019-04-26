@@ -4,11 +4,6 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 include_once 'functions.php';
-
-session_start();
-if (!isset($_SESSION['shopping_list'])) {
-    $_SESSION['shopping_list'] = [];
-}
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +43,7 @@ if (!isset($_SESSION['shopping_list'])) {
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <h2>Přidání nové položky</h2>
             <div>
-                <form name="item" action="" method="get">
+                <form name="item" action="" method="post">
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label for="title">Název</label>
@@ -91,57 +86,19 @@ if (!isset($_SESSION['shopping_list'])) {
                     </div>
                 </form>
             </div>
-            <?php
-            if (isset($_GET['add'])) {
-                $shoppingItem = [];
-                $shoppingItem['title'] = $_GET['title'];
-                $shoppingItem['store'] = $_GET['store'];
-                $shoppingItem['quantity'] = $_GET['quantity'];
-                $shoppingItem['price'] = $_GET['price'];
-                $_SESSION['shopping_list'][] = $shoppingItem;
-
-                echo '<div class="alert alert-success">Položka byla úspěšně přidána. :-)</div>';
-            }
-            ?>
-        </div>
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <h2>Seznam položek</h2>
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>Název</th>
-                    <th>Obchod</th>
-                    <th>Množství</th>
-                    <th>Cena</th>
-                </tr>
-                </thead>
-                <tbody>
-                <?php
-                $totalPrice = 0.00;
-                foreach ($_SESSION['shopping_list'] as $shoppingItem) {
-                    $totalPrice = $totalPrice + $shoppingItem['price'];
-                    echo sprintf(
-                        '<tr><td>%s</td><td>%s</td><td>%s</td><td>%s Kč</td></tr>',
-                        $shoppingItem['title'],
-                        $shoppingItem['store'],
-                        $shoppingItem['quantity'],
-                        $shoppingItem['price']
-                    );
-                }
-
-                ?>
-                </tbody>
-                <tfoot>
-                <tr>
-                    <th colspan="3">Celková cena položek</th>
-                    <th>
-                        <?php echo 0.00; ?> Kč
-                    </th>
-                </tr>
-                </tfoot>
-            </table>
         </div>
     </div>
+
+    <?php
+    if (!empty($_POST)) {
+        echo "<p>";
+        echo "<b>Název:</b> {$_POST['title']} <br>";
+        echo "<b>Obchod:</b> {$_POST['store']} <br>";
+        echo "<b>Množství</b> {$_POST['quantity']} <br>";
+        echo "<b>Cena</b> {$_POST['price']}";
+        echo "</p>";
+    }
+    ?>
 
     <?php include_once 'footer.php' ?>
 

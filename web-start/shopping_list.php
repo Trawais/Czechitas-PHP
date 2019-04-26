@@ -4,6 +4,14 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 include_once 'functions.php';
+session_start();
+if (!isset($_SESSION['shopping_list'])) {
+    $_SESSION['shopping_list'] = [];
+}
+
+if (!empty($_POST)) {
+    $_SESSION['shopping_list'][] = $_POST;
+}
 ?>
 
 <!DOCTYPE html>
@@ -36,14 +44,37 @@ include_once 'functions.php';
     </div>
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            Toto je můj nákupní seznam z mých oblíbených obchodů.
+            <h2>Seznam položek</h2>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Název</th>
+                    <th>Obchod</th>
+                    <th>Množství</th>
+                    <th>Cena</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $list = $_SESSION['shopping_list'];
+                    foreach ($list as $item) {
+                        echo "<tr>";
+                        echo "<td>{$item['title']}</td>";
+                        echo "<td>{$item['store']}</td>";
+                        echo "<td>{$item['quantity']}</td>";
+                        echo "<td>{$item['price']}</td>";
+                        echo "</tr>";
+                    }
+                    ?>
+                </tbody>
+            </table>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <h2>Přidání nové položky</h2>
             <div>
-                <form name="item" action="" method="get">
+                <form name="item" action="" method="post">
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label for="title">Název</label>
@@ -88,17 +119,6 @@ include_once 'functions.php';
             </div>
         </div>
     </div>
-
-    <?php
-    if (!empty($_GET)) {
-        echo "<p>";
-        echo "<b>Název:</b> {$_GET['title']} <br>";
-        echo "<b>Obchod:</b> {$_GET['store']} <br>";
-        echo "<b>Množství</b> {$_GET['quantity']} <br>";
-        echo "<b>Cena</b> {$_GET['price']}";
-        echo "</p>";
-    }
-    ?>
 
     <?php include_once 'footer.php' ?>
 
