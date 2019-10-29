@@ -4,13 +4,25 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 include_once 'functions.php';
-session_start();
-if (!isset($_SESSION['shopping_list'])) {
-    $_SESSION['shopping_list'] = [];
+
+$fileName = 'form_data.json';
+
+$formData = loadData($fileName);
+if (empty($formData)) {
+    $formData = [];
 }
 
 if (!empty($_POST)) {
-    $_SESSION['shopping_list'][] = $_POST;
+    echo "<p>";
+    echo "<b>Název:</b> {$_POST['title']} <br>";
+    echo "<b>Obchod:</b> {$_POST['store']} <br>";
+    echo "<b>Množství</b> {$_POST['quantity']} <br>";
+    echo "<b>Cena</b> {$_POST['price']}";
+    echo "</p>";
+
+    $formData[] = $_POST;
+
+    saveData($fileName, $formData);
 }
 ?>
 
@@ -56,8 +68,7 @@ if (!empty($_POST)) {
                 </thead>
                 <tbody>
                     <?php
-                    $list = $_SESSION['shopping_list'];
-                    foreach ($list as $item) {
+                    foreach ($formData as $item) {
                         echo "<tr>";
                         echo "<td>{$item['title']}</td>";
                         echo "<td>{$item['store']}</td>";

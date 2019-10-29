@@ -4,9 +4,12 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 include_once 'functions.php';
-session_start();
-if (!isset($_SESSION['shopping_list'])) {
-    $_SESSION['shopping_list'] = [];
+
+$fileName = 'form_data.json';
+
+$formData = loadData($fileName);
+if (empty($formData)) {
+    $formData = [];
 }
 
 if (!empty($_POST)) {
@@ -17,7 +20,9 @@ if (!empty($_POST)) {
     echo "<b>Cena</b> {$_POST['price']}";
     echo "</p>";
 
-    $_SESSION['shopping_list'][] = $_POST;
+   $formData[] = $_POST;
+
+   saveData($fileName, $formData);
 }
 ?>
 
