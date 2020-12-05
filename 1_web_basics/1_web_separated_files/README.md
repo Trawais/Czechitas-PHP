@@ -40,20 +40,17 @@ error_reporting(E_ALL);
 1. Prvním úkolem tedy bude tyto řádky přidat do našeho výchozího souboru.
 2. Následně si vysvěltíme a ukážeme,
 jak by měl být kód rozvržený,
-aby jste si do budoucna učetřily práci a nemuseli některé části stále dokola opakovat.
+aby jste si do budoucna ušetřily práci a nemuseli některé části stále dokola opakovat.
 3. Každá stránka by mohla být vytvořena zvlášť,
 ale bylo by zbytečné kopírování a opakování kódu.
 Proto opakující se části stránky rozdělíme do samostatných souborů.
-Tyto soubory následně připojíme do naší stránky.
+Tyto soubory následně připojíme do naší stránky pomocí příkazu `include_once()`.
 4. Pro ukázku si přesuneme první část kódu,
 která se bude na každé stránce opakovat,
 do samostatného souboru.
-Touto částí je tag `<head>` i s jeho obsahem.
+Touto částí je tag `<header>` i s jeho obsahem.
 Bude vždy na každé stránce,
 proto nám nic nebrání v tom ho přesunout
-do souboru `head.php` a tento soubor potom připojit v odpovídajícím místě.
-5. Vaším úkolem pro tuto část bude stejným způsobem oddělit do samostatných souborů tyto části:
- - menu nacházející se mezi tagy `<nav></nav>` do souboru `menu.php`
- - hlavičku webu nacházející se mezi tagy `<header></header>` do souboru `header.php`
- - patičku webu nacházející se mezi tagy `<footer></footer>` do souboru `footer.php`
- Tyto soubory poté zpět připojte na odpovídající místo, aby výsledný web měl stejnou podobu jako na začátku.
+do souboru `header.php` a tento soubor potom připojit v odpovídajícím místě.
+5. Prozkoumejte i další soubory, které se ve výchozím souboru vkládají.
+Kolik jste jich našli a které HTML elementy jsou v nich uloženy?

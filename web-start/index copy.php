@@ -1,37 +1,26 @@
 <?php
 
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 ?>
 
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 
-<?
-    include_once("head.php");
+<?php
+include_once("head.php");
 ?>
 
 <body>
 
-<?
-    include_once("menu.php");
+<?php
+include_once("menu.php");
+include_once("header.php");
 ?>
 
-<header class="intro-header" style="background-image: url('img/home-bg.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Můj první web</h1>
-                    <hr class="small">
-                    <span class="subheading">Moje Jméno</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+
 
 <div class="container">
     <div class="row">
@@ -56,14 +45,11 @@
 
 <hr>
 
-<?
-    include_once("footer.php");
+<?php
+include_once("footer.php");
 ?>
-
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<script src="js/clean-blog.min.js"></script>
 
 </body>
 
 </html>
+

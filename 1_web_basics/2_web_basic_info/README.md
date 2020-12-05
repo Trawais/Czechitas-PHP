@@ -22,11 +22,8 @@ Takto budete mít vypsané jméno na obou místech a pokud ho někdy budete cht�
 stačí pouze na jednom místě.
 4. Vaším úkolem je vytvořit podmíněný blok v sekci **O mně**.
 Vytvořte proměnnou `$about`,
-ve které bude nějaký text o vás.
-Poté druhou proměnnou `$showAbout` s obsahem typu
-boolean (true nebo false).
+ve které bude nějaký krátký text o vás.
 5. Proměnnou `$about` s textem o vás vypište za nadpis **O mně** (za tag `<h4></h4>`) místo aktuálního odstavce,
 který se tam aktuálně nachází.
-Zobrazení tohoto odstavce bude ale podmíněno proměnnou `$showAbout`.
-Pokud bude mít tato proměnná hodnotu `true`, zobrazí se tento odstavec.
-V opačném případě se ostavec nezobrazí.
+Zobrazení tohoto odstavce bude ale podmíněno podmínkou.
+Funguje ti tvoje podmínka na obe varianty `true` i `false`?
