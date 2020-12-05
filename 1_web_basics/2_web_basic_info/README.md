@@ -26,4 +26,4 @@ ve které bude nějaký krátký text o vás.
 5. Proměnnou `$about` s textem o vás vypište za nadpis **O mně** (za tag `<h4></h4>`) místo aktuálního odstavce,
 který se tam aktuálně nachází.
 Zobrazení tohoto odstavce bude ale podmíněno podmínkou.
-Funguje ti tvoje podmínka na obe varianty `true` i `false`?
+Funguje ti tvoje podmínka správně pro obě varianty `true` i `false`?
