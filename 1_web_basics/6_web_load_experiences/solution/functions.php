@@ -1,11 +1,10 @@
 <?php
 
-define('WEB_TITLE', "Super web");
 define('WORK_EXPERIENCES_FILE', "./data/work-experiences.json");
 
 function getWebTitle()
 {
-    return WEB_TITLE;
+    return "Super web";
 }
 
 function getYear()

@@ -1,10 +1,8 @@
 <?php
 
-define('WEB_TITLE', "Super web");
-
 function getWebTitle()
 {
-    return WEB_TITLE;
+    return "Super web";
 }
 
 function getYear()
