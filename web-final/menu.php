@@ -16,7 +16,7 @@ $pages = [
                 <span class="sr-only">Menu</span>
                 Menu <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="index.php"><?=getWebTitle()?></a>
+            <a class="navbar-brand" href="index.php"><?php echo getWebTitle()?></a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
