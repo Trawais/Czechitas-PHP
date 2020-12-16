@@ -9,13 +9,13 @@
 <!DOCTYPE html>
 <html lang="cs">
 
-<?
+<?php
     include_once("head.php");
 ?>
 
 <body>
 
-<?
+<?php
     include_once("menu.php");
 ?>
 
@@ -65,7 +65,7 @@
 
 <hr>
 
-<?
+<?php
     include_once("footer.php");
 ?>
 
