@@ -23,7 +23,7 @@ include_once 'functions.php';
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading">
-                    <h1><?=getWebTitle()?></h1>
+                    <h1><?php echo getWebTitle()?></h1>
                     <hr class="small">
                 </div>
             </div>
