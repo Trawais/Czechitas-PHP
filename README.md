@@ -3,10 +3,8 @@
 Úkoly pro Czechitas pro výuku PHP.
 
 ## Prerekvizity
-* PHP (nainstalováno nejlépe přes xampp a přidán do systémové cesty)
-  * [Video návod @youtube](https://www.youtube.com/watch?v=32NNrg3VxNc)
-* Oblíbený editor zdrojovéhp kódu
-  * [Videno návod @youtube](https://www.youtube.com/watch?v=qXJk5kt4oAY)
+* Instalace PHP a editoru Visual Studio Code pro editaci zdrojových kódů
+  * [Video návod @youtube](https://youtu.be/AtU-a4q6bIg)
 
 ## Jak spustit
 * Přepneme se do složky, kde bude probíhat celá naše práce
